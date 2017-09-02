@@ -5,15 +5,7 @@
  */
 
 def problem001: Int = {
-  var answer: Int = 0
-
-  for (i <- 1 to 1000) {
-    if (i % 3 == 0 | i % 5 == 0) {
-      answer += i
-    }
-  }
-
-  answer
+  (1 to 1000).filter(i => (i % 3 == 0 || i % 5 == 0)).sum
 }
 
 // Compute the answer
