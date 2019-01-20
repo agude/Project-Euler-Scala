@@ -7,15 +7,11 @@
  * exceed four million, find the sum of the even-valued terms.
  */
 
-def fibonacci(n: Int): Int = {
-  var ret: Int = 0
-
-  if (n == 0 | n == 1) { ret = n }
-  else {
-    ret = fibonacci(n-1) + fibonacci(n-2)
-  }
-  ret
+def fibonacci(n: Int): Int = n match {
+  case 0 | 1 => n
+  case _ =>  fibonacci(n-1) + fibonacci(n-2)
 }
+
 
 def problem002: Int = {
   var answer: Int = 0
@@ -30,6 +26,7 @@ def problem002: Int = {
   }
   answer
 }
+
 
 // Compute the answer
 println(problem002)
